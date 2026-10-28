@@ -1,6 +1,6 @@
 # render-pool
 
-![render-pool banner](docs/banner.svg)
+![render-pool banner](docs/banner.jpg)
 
 Pairs multiple Render.com accounts into a single, high-availability virtual server that survives free-tier quotas through automated half-month shift rotations, zero-downtime router handoffs, and Firebase Storage disk persistence.
 
@@ -39,6 +39,8 @@ Render's free tier provides **750 free instance hours per month per account**.
 ---
 
 ## Architecture
+
+![render-pool architecture](docs/banner.svg)
 
 ```text
                +--------------------------------------------+
