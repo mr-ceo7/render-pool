@@ -76,7 +76,10 @@ def pull_snapshot():
         blob.download_to_filename(tmp_path)
         print(f"[render_sync] Extracting snapshot to {DATA_DIR}...")
         with tarfile.open(tmp_path, "r:gz") as tar:
-            tar.extractall(path=DATA_DIR)
+            if hasattr(tarfile, "data_filter"):
+                tar.extractall(path=DATA_DIR, filter="data")
+            else:
+                tar.extractall(path=DATA_DIR)
         print("[render_sync] ✓ Snapshot restored successfully.")
         return True
     except Exception as e:
