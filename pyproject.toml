@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "render-pool"
+version = "1.0.0"
+description = "Multi-account Render pooling, quota evasion, and unified zero-downtime deployment orchestrator"
+readme = "README.md"
+authors = [
+    { name = "mr-ceo7" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+keywords = ["render", "fastapi", "cloudflare", "vercel", "quota-rotation", "multi-account", "vps", "paas"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Topic :: Utilities",
+    "Topic :: System :: Systems Administration"
+]
+
+[project.scripts]
+render-pool = "render_pool.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["render_pool*"]

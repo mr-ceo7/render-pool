@@ -1,0 +1,12 @@
+name = "render-pool-router"
+main = "cloudflare-worker.js"
+compatibility_date = "2024-01-01"
+
+# KV Namespace for dynamic zero-downtime URL updates
+# Create with: npx wrangler kv:namespace create ROUTER_KV
+# kv_namespaces = [
+#   { binding = "ROUTER_KV", id = "<YOUR_KV_NAMESPACE_ID>" }
+# ]
+
+[vars]
+ACTIVE_BACKEND_URL = "https://your-primary-service.onrender.com"

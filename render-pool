@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+"""
+render-pool: Multi-account Render instance pooling, quota survival, and unified deployment orchestrator.
+"""
+
+import os
+import sys
+
+# Ensure module path is accessible whether run directly or symlinked
+script_dir = os.path.dirname(os.path.realpath(__file__))
+if script_dir not in sys.path:
+    sys.path.insert(0, script_dir)
+
+from render_pool.cli import main
+
+if __name__ == "__main__":
+    main()
