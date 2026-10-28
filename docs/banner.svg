@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#070b12" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f293d" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="primaryTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <linearGradient id="glowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGrad)" />
+  <rect width="1198" height="418" x="1" y="1" rx="15" fill="none" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Subtle Grid Lines -->
+  <g opacity="0.08" stroke="#94a3b8" stroke-width="1">
+    <line x1="0" y1="70" x2="1200" y2="70" />
+    <line x1="0" y1="140" x2="1200" y2="140" />
+    <line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="280" x2="1200" y2="280" />
+    <line x1="0" y1="350" x2="1200" y2="350" />
+    <line x1="150" y1="0" x2="150" y2="420" />
+    <line x1="300" y1="0" x2="300" y2="420" />
+    <line x1="450" y1="0" x2="450" y2="420" />
+    <line x1="600" y1="0" x2="600" y2="420" />
+    <line x1="750" y1="0" x2="750" y2="420" />
+    <line x1="900" y1="0" x2="900" y2="420" />
+    <line x1="1050" y1="0" x2="1050" y2="420" />
+  </g>
+
+  <!-- Accent glow line at top -->
+  <line x1="100" y1="2" x2="1100" y2="2" stroke="url(#glowLine)" stroke-width="3" />
+
+  <!-- Title & Branding -->
+  <g transform="translate(60, 75)">
+    <!-- Icon -->
+    <rect width="44" height="44" rx="10" fill="#1e1b4b" stroke="#818cf8" stroke-width="2" />
+    <path d="M12 28L22 14L32 28H12Z" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round" />
+    <circle cx="22" cy="18" r="2.5" fill="#c084fc" />
+
+    <!-- Text -->
+    <text x="56" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="800" fill="url(#primaryTextGrad)" letter-spacing="-0.5">render-pool</text>
+    <text x="250" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#64748b" letter-spacing="1.5">v1.0.0</text>
+    <text x="0" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="400" fill="#94a3b8">Pair multiple Render instances into a single quota-surviving virtual server.</text>
+  </g>
+
+  <!-- Feature Badges -->
+  <g transform="translate(60, 175)">
+    <!-- Badge 1: 750h Safe -->
+    <rect width="150" height="32" rx="16" fill="#064e3b" fill-opacity="0.6" stroke="#10b981" stroke-width="1.5" />
+    <text x="75" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">✓ 750h Quota Safe</text>
+
+    <!-- Badge 2: Zero Downtime -->
+    <g transform="translate(162, 0)">
+      <rect width="180" height="32" rx="16" fill="#1e1b4b" fill-opacity="0.6" stroke="#818cf8" stroke-width="1.5" />
+      <text x="90" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#a5b4fc" text-anchor="middle">⚡ Zero-Downtime Handoff</text>
+    </g>
+
+    <!-- Badge 3: Firebase Persistence -->
+    <g transform="translate(354, 0)">
+      <rect width="180" height="32" rx="16" fill="#451a03" fill-opacity="0.6" stroke="#f59e0b" stroke-width="1.5" />
+      <text x="90" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#fbbf24" text-anchor="middle">💾 Firebase Storage Sync</text>
+    </g>
+
+    <!-- Badge 4: FastAPI + Vercel -->
+    <g transform="translate(546, 0)">
+      <rect width="170" height="32" rx="16" fill="#0c4a6e" fill-opacity="0.6" stroke="#0284c7" stroke-width="1.5" />
+      <text x="85" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#38bdf8" text-anchor="middle">🚀 FastAPI + Vercel</text>
+    </g>
+  </g>
+
+  <!-- Interactive Terminal / Visual Card -->
+  <g transform="translate(60, 230)" filter="url(#shadow)">
+    <!-- Terminal Box -->
+    <rect width="1080" height="150" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- Window buttons -->
+    <circle cx="24" cy="20" r="5.5" fill="#ef4444" />
+    <circle cx="42" cy="20" r="5.5" fill="#f59e0b" />
+    <circle cx="60" cy="20" r="5.5" fill="#10b981" />
+    <text x="95" y="24" font-family="'Fira Code', monospace" font-size="12" fill="#64748b">render-pool status — active shift orchestration</text>
+
+    <!-- Visual Handoff Nodes inside Terminal -->
+    <!-- Node 1: Account A -->
+    <g transform="translate(30, 48)">
+      <rect width="280" height="80" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+      <text x="16" y="28" font-family="'Fira Code', monospace" font-size="13" font-weight="700" fill="#34d399">Account A: PRIMARY</text>
+      <text x="16" y="48" font-family="'Fira Code', monospace" font-size="11" fill="#94a3b8">Status: RUNNING (Days 1–15)</text>
+      <text x="16" y="66" font-family="'Fira Code', monospace" font-size="11" fill="#64748b">Quota: 360h / 750h (48% used)</text>
+      <circle cx="254" cy="25" r="5" fill="#10b981" />
+    </g>
+
+    <!-- Arrow / Handoff -->
+    <g transform="translate(325, 78)">
+      <line x1="0" y1="10" x2="80" y2="10" stroke="#818cf8" stroke-width="2" stroke-dasharray="4 4" />
+      <polygon points="80,6 90,10 80,14" fill="#818cf8" />
+      <text x="45" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#a5b4fc" text-anchor="middle">DAY 16</text>
+      <text x="45" y="25" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#64748b" text-anchor="middle">HANDOFF</text>
+    </g>
+
+    <!-- Node 2: Account B -->
+    <g transform="translate(430, 48)">
+      <rect width="280" height="80" rx="8" fill="#0f172a" stroke="#6366f1" stroke-width="1.5" />
+      <text x="16" y="28" font-family="'Fira Code', monospace" font-size="13" font-weight="700" fill="#818cf8">Account B: SECONDARY</text>
+      <text x="16" y="48" font-family="'Fira Code', monospace" font-size="11" fill="#94a3b8">Status: STANDBY (Days 16–30)</text>
+      <text x="16" y="66" font-family="'Fira Code', monospace" font-size="11" fill="#64748b">Quota: 0h used (Suspended)</text>
+      <circle cx="254" cy="25" r="5" fill="#818cf8" />
+    </g>
+
+    <!-- Router & Persistence target -->
+    <g transform="translate(735, 78)">
+      <line x1="0" y1="10" x2="50" y2="10" stroke="#38bdf8" stroke-width="2" />
+      <polygon points="50,6 60,10 50,14" fill="#38bdf8" />
+    </g>
+
+    <g transform="translate(810, 48)">
+      <rect width="240" height="80" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+      <text x="16" y="28" font-family="'Fira Code', monospace" font-size="12" font-weight="700" fill="#38bdf8">Vercel &amp; Cloudflare</text>
+      <text x="16" y="48" font-family="'Fira Code', monospace" font-size="11" fill="#94a3b8">api.yourdomain.com</text>
+      <text x="16" y="66" font-family="'Fira Code', monospace" font-size="11" fill="#10b981">● Dynamic Zero-Downtime</text>
+    </g>
+  </g>
+</svg>

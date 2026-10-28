@@ -1,5 +1,7 @@
 # render-pool
 
+![render-pool banner](docs/banner.svg)
+
 Pairs multiple Render.com accounts into a single, high-availability virtual server that survives free-tier quotas through automated half-month shift rotations, zero-downtime router handoffs, and Firebase Storage disk persistence.
 
 Built for **FastAPI backends** connected to **Vercel frontends**, but compatible with any containerized web service.
